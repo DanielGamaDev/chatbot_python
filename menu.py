@@ -11,7 +11,6 @@ import main
 import turismo
 import varejo
 import atacado
-import verificador
 
 def menu_inicial():
     texto_menu_inicial = """
@@ -24,11 +23,11 @@ def menu_inicial():
 
     resposta = input("Qual a opção desejada? Resposta: ")
     if resposta == "1":
-        turismo.opcao_turismo()
+        return turismo.opcao_turismo()
     elif resposta == "2":
-        varejo.opcao_varejo()
+        return varejo.opcao_varejo()
     elif resposta == "3":
-        atacado.opcao_atacado()
+        return atacado.opcao_atacado()
     elif resposta == "4":
         print("OK! Vamos cancelar esta conversa.")
         return resposta
@@ -38,3 +37,11 @@ def menu_inicial():
         main.start()
     
     return resposta
+
+def menu_final():
+    texto_despedida = """ \n
+        Obrigado por se informar com o FRIBOT!
+        Caso queira saber mais sobre Nova Friburgo basta iniciar outra conversa.
+        Tchau ;)\n"""
+    print(texto_despedida)
+    return False

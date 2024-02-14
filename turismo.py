@@ -19,10 +19,7 @@
 
 """
 # import pywhatkit as kit
-import main
 import menu
-import varejo
-import atacado
 import verificador
 
 def opcao_turismo():
@@ -38,11 +35,11 @@ def opcao_turismo():
     print(texto_turismo)
     resposta = input("Qual a opção desejada? Resposta: ")
     if resposta == "1":
-        opcoes_pontos_turisticos()
+        return opcoes_pontos_turisticos()
     elif resposta == "2":
-        opcoes_restaurantes()
+        return opcoes_restaurantes()
     elif resposta == "3":
-        opcoes_shoppings()
+        return opcoes_shoppings()
     elif resposta == "4":
         print("OK! Vamos te retornar para as opções anteriores.")
         menu.menu_inicial()
@@ -52,10 +49,11 @@ def opcao_turismo():
 
 def opcoes_pontos_turisticos():
     print("Estas são as opcoes_pontos_turisticos")
+    return verificador.continuar_conversa()
 
 def opcoes_restaurantes():
     print("Estas são as opcoes_restaurantes")
-    return 0
+    
 
 def opcoes_shoppings():
     print("Estas são as opcoes_shoppings")

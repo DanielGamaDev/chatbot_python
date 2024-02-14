@@ -22,11 +22,7 @@
 
 """
 # import pywhatkit as kit
-import main
 import menu
-import turismo
-import varejo
-import verificador
 
 def opcao_varejo():
     texto_varejo = """
